@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -19,10 +20,53 @@
           <li><a href="#">Más</a></li>
       </ul>
   </nav>
+=======
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/styles/index.css" />
+  <link rel="stylesheet" href="/src/styles/estilos.css" />
+  <title>Vite App</title>
+  <style>
+    #logo-container {
+      display: flex;
+      align-items: center;
+    }
+>>>>>>> origin/frontend
 
-  <!-- Rectángulo blanco difuminado con bordes redondeados -->
-  <div class="rectangle">
+    #logo {
+      width: 40px; /* Ancho del logo */
+      height: 40px; /* Alto del logo */
+      margin-right: 10px; /* Espacio entre el logo y el título */
+    }
+
+    #titulo {
+      font-size: 30px; /* Tamaño de fuente del título */
+      font-weight: bold; /* Negrita */
+      font-family: 'League Spartan', sans-serif; /* Fuente League Spartan */
+      color: #ffffff; /* Color del texto del título */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="logo-container">
+      <img src="logo.png" alt="Logo de tu sitio web" id="logo" />
+      <span id="titulo">Intellitrip</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Descubre</a></li>
+        <li><a href="#">Viajes</a></li>
+        <li><a href="#">Comunidad</a></li>
+        <li><a href="#">Más</a></li>
+      </ul>
+    </nav>
+    <!-- Rectángulo blanco difuminado con bordes redondeados -->
+    <div class="rectangle">
       <input type="text" id="message" placeholder="Buscar en Google o escribir una URL">
+<<<<<<< HEAD
       <button id="onclick">Buscar</button>
     
   </div>
@@ -35,6 +79,15 @@
     <p id="description"></p>
   </div>
 </div>
+=======
+      <button id="onclick" onclick="cambiarOpacidad">Buscar</button>
+    </div>
+  </header>
+
+  <div id="backgroundDiv">
+    <div id="info"></div>
+  </div>
+>>>>>>> origin/frontend
 
     <script type="module" src="/src/main.js"></script>
     <script>
