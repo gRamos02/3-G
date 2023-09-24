@@ -1,0 +1,125 @@
+
+body{
+    background-color: #e0dfdf;
+    margin: 0px;
+    padding: 0px;
+}
+
+.google-search {
+    z-index: 998;
+    background-color: #ffffff;
+display: flex;
+align-items: center;
+border: 1px solid #dfe1e5;
+padding: 10px;
+width: 30%;
+max-width: 80%;
+margin: 0 auto;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+margin-top: .5vh;
+border-radius: 4%;
+}
+
+input[type="text"] {
+flex: 1;
+border: none;
+padding: 10px;
+outline: none;
+font-size: 16px;
+z-index: 998;
+border-radius: 2%;
+margin-top: 2.5vh;
+}
+
+button {
+z-index: 999;
+background-color: #ffffff;
+color: rgb(0, 108, 228);
+border: none;
+border-radius: 24px;
+padding: 10px 20px;
+cursor: pointer;
+transition: background-color 0.3s;
+margin-left: 3%;
+font-family: 'Lato',sans-serif;
+font-weight: bold;
+}
+
+
+
+button:hover {
+z-index: 999;
+background-color: #e27208;
+}
+
+
+#backgroundDiv {
+margin-top: 30vh;
+width: 100%;
+height: 70vh;
+background-size: cover;
+background-position: center;
+transition: background-image 1s ease-in-out;
+opacity: 80%;
+z-index: 10;
+}
+
+
+
+header {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        height: 35vh; /* Altura fija de 309 píxeles */
+        background-color: #006CE4; /* Color de fondo del encabezado */
+        color: #fff; /* Color del texto en el encabezado */
+        text-align: center; /* Alineación del texto */
+        padding: 20px; /* Espaciado interno */
+        position: fixed; /* Establece la posición fija */
+        top: 0; /* Mantiene el encabezado en la parte superior */
+        
+        z-index: 100;
+    }
+
+    /* Estilo para el navbar */
+    nav {
+        font-family: 'Lato', sans-serif; /* Fuente Lato */
+        
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul li {
+        display: inline;
+        margin-right: 20px; /* Espaciado entre elementos del navbar */
+    }
+
+    ul li:last-child {
+        margin-right: 0; /* Elimina el margen derecho del último elemento */
+    }
+
+    /* Estilo para el rectángulo blanco difuminado */
+    .rectangle {
+        background-color: rgba(255, 255, 255, 0.2); /* Color blanco con opacidad al 20% */
+        width: 96%;
+        margin-left: 0%;
+        height: 10vh; /* Altura del rectángulo (ajusta según tus necesidades) */
+        position: absolute;
+        top: 20vh; /* Ajusta la posición vertical según tus necesidades */
+        z-index: 100; /* Coloca el rectángulo detrás del contenido */
+        border-radius: 10px; /* Radio de las esquinas */
+        align-items: center;
+        opacity: 100%;
+    }
+
+    /* Estilo para el texto en el encabezado */
+    h1 {
+        font-size: 24px; /* Tamaño de fuente del encabezado */
+    }
+
+    /* Estilo para los enlaces del navbar */
+    nav ul li a {
+        color: #fff; /* Color de texto en blanco */
+        text-decoration: none; /* Elimina el subrayado */
+    }
