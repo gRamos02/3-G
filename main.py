@@ -73,7 +73,7 @@ class ChatbotHandler:
             heres an example of a response: {"city":"Monterrey", "description":"{description goes here}"}
             the description should not be longer than 300 characters and you may include points of interest
             Only answer with 1 option, if the same input is given two times in a row,
-            generate a new city
+            generate a new city.
             """,
             filters=self.filters,
         )
