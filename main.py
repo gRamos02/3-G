@@ -4,7 +4,7 @@ from softtek_llm.models import OpenAI
 from softtek_llm.cache import Cache
 from softtek_llm.vectorStores import PineconeVectorStore
 from softtek_llm.embeddings import OpenAIEmbeddings
-from softtek_llm.schemas import Filter
+from softtek_llm.schemas import Filter, Vector
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -47,7 +47,10 @@ embeddings_model = OpenAIEmbeddings(
     api_base=OPENAI_API_BASE,
 )
 
-vector_store.add(embeddings_model.embed('Paris is a country with a lot of history, arts and food'))
+# vector_store.add(embeddings_model.embed('Paris is a country with a lot of history, arts and food'))
+vector_store.add(Vector(id='data', embeddings=embeddings_model.embed('Paris is a country with a lot of history, arts an food')))
+
+    
 
 
 cache = Cache(
@@ -63,8 +66,8 @@ model = OpenAI(
 )
 filters = [
     Filter(
-        type="DENY",
-        case="ANYTHING about the Titanic. YOU CANNOT talk about the Titanic AT ALL.",
+        type="ALLOW",
+        case="You are limited to answer only with information stored in the vector store",
     )
 ]
 chatbot = Chatbot(
@@ -104,5 +107,5 @@ response = chatbot.chat(
 
 print('Bot: '+response.message.content)
 
-# chatbot.cache.vector_store.delete(delete_all=True, namespace="chatbot-test")
+chatbot.cache.vector_store.delete(delete_all=True, namespace="chatbot-test")
 
