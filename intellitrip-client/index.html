@@ -8,10 +8,49 @@
     <title>Vite App</title>
   </head>
   <body>
-    <header>
-      <h1>Hello World</h1>
-    </header>
-    <div id="app"></div>
+    <style>
+      .google-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 10px;
+    width: 400px;
+    max-width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+    </style>
+
+<div class="google-search">
+  <input type="text" id="message" placeholder="Buscar en Google o escribir una URL">
+  <button id="send">Buscar</button>
+</div>
+
     <script type="module" src="/src/main.js"></script>
+
   </body>
 </html>
