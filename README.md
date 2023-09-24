@@ -1,4 +1,4 @@
-# intellitrip
+# Intellitrip
 
 AI based search engine for travel recommendations and generative descriptions.
 
