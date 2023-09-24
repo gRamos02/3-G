@@ -82,6 +82,7 @@ header {
     /* Estilo para el navbar */
     nav {
         font-family: 'Lato', sans-serif; /* Fuente Lato */
+        margin-top: -6vh;;
         
     }
 
