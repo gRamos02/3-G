@@ -6,6 +6,7 @@ from softtek_llm.vectorStores import PineconeVectorStore
 from softtek_llm.embeddings import OpenAIEmbeddings
 from softtek_llm.schemas import Filter, Vector
 from dotenv import load_dotenv
+import pinecone 
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -35,6 +36,8 @@ PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 if PINECONE_INDEX_NAME is None:
     raise ValueError("PINECONE_INDEX_NAME not found in .env file")
 
+pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
+
 vector_store = PineconeVectorStore(
     api_key=PINECONE_API_KEY,
     environment=PINECONE_ENVIRONMENT,
@@ -48,9 +51,7 @@ embeddings_model = OpenAIEmbeddings(
 )
 
 # vector_store.add(embeddings_model.embed('Paris is a country with a lot of history, arts and food'))
-vector_store.add(Vector(id='data', embeddings=embeddings_model.embed('Paris is a country with a lot of history, arts an food')))
-
-    
+vector_store.add([Vector(id='data', embeddings=embeddings_model.embed('Paris is a country with a lot of history, arts an food'))])
 
 
 cache = Cache(
@@ -65,10 +66,10 @@ model = OpenAI(
     # verbose=True,
 )
 filters = [
-    Filter(
-        type="ALLOW",
-        case="You are limited to answer only with information stored in the vector store",
-    )
+    # Filter(
+    #     type="ALLOW",
+    #     case="You are limited to answer only with information stored in the vector store",
+    # )
 ]
 chatbot = Chatbot(
     model=model,
