@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/styles/index.css" />
     <link rel="stylesheet" href="/src/styles/estilos.css" />
+    <!-- <script src="./src/main.js"></script>  -->
     <title>Vite App</title>
   </head>
   <body>
@@ -22,55 +23,21 @@
   <!-- Rectángulo blanco difuminado con bordes redondeados -->
   <div class="rectangle">
       <input type="text" id="message" placeholder="Buscar en Google o escribir una URL">
-      <button id="onclick" onclick="cambiarOpacidad">Buscar</button>
+      <button id="onclick">Buscar</button>
     
   </div>
 </header>
 
 
 <div id="backgroundDiv">
-  <div id="info"></div>
+  <div id="info">
+    <h3 id="title"></h3>
+    <p id="description"></p>
+  </div>
 </div>
 
     <script type="module" src="/src/main.js"></script>
     <script>
-      // Array de URLs de imágenes de fondo
-const backgrounds = [
-    'https://humanidades.com/wp-content/uploads/2017/03/ciudad-3-e1565900111723.jpg',
-    'https://www.bancomundial.org/content/dam/photos/780x439/2018/oct-3/BuenosAires780.jpg',
-    'https://cdn.forbes.com.mx/2023/02/ciudades-mas-visitadas-2023.webp',
-    // Agrega más URLs de imágenes según sea necesario
-];
-
-
-// Función para cambiar el fondo del div automáticamente
-function changeBackgroundAutomatically() {
-    const randomIndex = Math.floor(Math.random() * backgrounds.length);
-    const selectedBackground = backgrounds[randomIndex];
-    const backgroundDiv = document.getElementById('backgroundDiv');
-    backgroundDiv.style.backgroundImage = `url(${selectedBackground})`;
-}
-
-// Cambia el fondo del div automáticamente cada 5 segundos (5000 milisegundos)
-setInterval(changeBackgroundAutomatically, 5000);
-
-// Cambia el fondo del div al cargar la página
-changeBackgroundAutomatically();
-
-function cambiarOpacidad() {
-    const miDiv = document.getElementById('info');
-    if (info.style.opacity === '0') {
-        info.style.opacity = '.8';
-    } else {
-        info.style.opacity = '.8';
-    }
-}
-
-const boton = document.getElementById('onclick');
-boton.addEventListener('click', cambiarOpacidad);
-
-
-
 
 
     </script>
