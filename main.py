@@ -55,7 +55,7 @@ model = OpenAI(
     model_name=OPENAI_CHAT_MODEL_NAME,
     api_type="azure",
     api_base=OPENAI_API_BASE,
-    verbose=True,
+    # verbose=True,
 )
 filters = [
     Filter(
@@ -65,33 +65,40 @@ filters = [
 ]
 chatbot = Chatbot(
     model=model,
-    description="You are a very helpful and polite chatbot",
+    # description="You are a very helpful and polite chatbot",
+    description="You are a informal chatbot",
     filters=filters,
-    cache=cache,
-    verbose=True,
+    # cache=cache,
+    # verbose=True,
 )
 
 response = chatbot.chat(
-    "Hello! My name is Jeff.",
+    str(input('Message: ')),
+    # "Hello! My name is Jeff.",
     print_cache_score=True,
     cache_kwargs={"namespace": "chatbot-test"},
 )
 
-print(response)
+
+print('Bot: '+response.message.content)
 
 response = chatbot.chat(
-    "What is my name?",
+    str(input('Message: ')),
+    # "What is my name?",
     print_cache_score=True,
     cache_kwargs={"namespace": "chatbot-test"},
 )
 
-print(response)
+print(response.message.content)
 
-# response = chatbot.chat(
-#     "When did the Titanic sink?",
-#     print_cache_score=True,
-#     cache_kwargs={"namespace": "chatbot-test"},
-# )
+response = chatbot.chat(
+    str(input('Message: ')),
+    # "When did the Titanic sink?",
+    print_cache_score=True,
+    cache_kwargs={"namespace": "chatbot-test"},
+)
+
+print('Bot: '+response.message.content)
 
 # chatbot.cache.vector_store.delete(delete_all=True, namespace="chatbot-test")
 
