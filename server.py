@@ -3,7 +3,6 @@ from main import ChatbotHandler
 from fastapi import FastAPI
 
 app = FastAPI()
-
 bot = ChatbotHandler()
 
 @app.get("/")

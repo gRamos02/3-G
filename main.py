@@ -72,6 +72,8 @@ class ChatbotHandler:
             Your job is to briefly descibe cities and touristic places.
             heres an example of a response: {"city":"Monterrey", "description":"{description goes here}"}
             the description should not be longer than 300 characters and you may include points of interest
+            if the input is a description of a place, you have to return an 
+            array of jsons, each one cotaining a city, examle : [{},{}] 
             """,
             filters=self.filters,
         )
