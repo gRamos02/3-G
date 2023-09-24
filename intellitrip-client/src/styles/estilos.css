@@ -123,3 +123,14 @@ header {
         color: #fff; /* Color de texto en blanco */
         text-decoration: none; /* Elimina el subrayado */
     }
+
+    #info{
+        background-color: #ffffff;
+        height: 50vh;
+        width: 50%;
+        border: line black 1px;
+        margin-left: 25%;
+        margin-top: 10vh;
+        position: absolute;
+        opacity: 0%;
+    }

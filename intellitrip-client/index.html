@@ -22,13 +22,15 @@
   <!-- Rectángulo blanco difuminado con bordes redondeados -->
   <div class="rectangle">
       <input type="text" id="message" placeholder="Buscar en Google o escribir una URL">
-      <button id="send">Buscar</button>
+      <button id="onclick" onclick="cambiarOpacidad">Buscar</button>
     
   </div>
 </header>
 
 
-<div id="backgroundDiv"></div>
+<div id="backgroundDiv">
+  <div id="info"></div>
+</div>
 
     <script type="module" src="/src/main.js"></script>
     <script>
@@ -54,6 +56,22 @@ setInterval(changeBackgroundAutomatically, 5000);
 
 // Cambia el fondo del div al cargar la página
 changeBackgroundAutomatically();
+
+function cambiarOpacidad() {
+    const miDiv = document.getElementById('info');
+    if (info.style.opacity === '0') {
+        info.style.opacity = '.8';
+    } else {
+        info.style.opacity = '.8';
+    }
+}
+
+const boton = document.getElementById('onclick');
+boton.addEventListener('click', cambiarOpacidad);
+
+
+
+
 
     </script>
 
