@@ -1,1 +1,4 @@
 git+https://github.com/Fridaplatform/SofttekLLMSDK.git
+fastapi
+uvicorn
+requests

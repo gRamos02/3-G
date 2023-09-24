@@ -1,0 +1,59 @@
+[
+    {
+        "nombre": "París",
+        "descripcion": "París es la capital de Francia y uno de los destinos turísticos más populares del mundo. Conocida como la Ciudad de la Luz, París es famosa por su rica historia, arquitectura impresionante y cultura vibrante.",
+        "ventajas": [
+          "Monumentos icónicos como la Torre Eiffel y el Louvre.",
+          "Gastronomía de clase mundial con croissants y vinos excelentes.",
+          "Cultura artística y de moda de renombre internacional."
+        ],
+        "desventajas": [
+          "Costo de vida relativamente alto.",
+          "Ajetreo y bullicio en las zonas turísticas.",
+          "Posibilidad de barreras lingüísticas para quienes no hablan francés."
+        ],
+        "gasto_promedio": {
+          "moneda": "euro",
+          "monto_aproximado": 150
+        },
+        "etiquetas": ["Cultura", "Historia", "Gastronomía", "Arte", "Moda"]
+      },
+      {
+        "nombre": "Nueva York",
+        "descripcion": "Nueva York es la ciudad más grande de los Estados Unidos y un epicentro global de cultura, negocios y entretenimiento. Conocida como la Gran Manzana, ofrece una experiencia diversa y emocionante a los visitantes.",
+        "ventajas": [
+          "Iconos como Times Square, Central Park y la Estatua de la Libertad.",
+          "Excelente escena de restaurantes y gastronomía internacional.",
+          "Una variedad de opciones de entretenimiento, desde teatros de Broadway hasta museos de clase mundial."
+        ],
+        "desventajas": [
+          "Costo de vida muy alto, especialmente en alojamiento.",
+          "El tráfico y el transporte público pueden ser caóticos.",
+          "El clima puede ser extremo en invierno y verano."
+        ],
+        "gasto_promedio": {
+          "moneda": "dólar estadounidense",
+          "monto_aproximado": 200
+        },
+        "etiquetas": ["Cultura", "Entretenimiento", "Gastronomía", "Arte", "Compras"]
+      },
+      {
+        "nombre": "Kioto",
+        "descripcion": "Kioto es una ciudad japonesa que evoca la esencia de la antigua Japón. Con sus templos históricos, jardines zen y tradiciones culturales, es un destino perfecto para los amantes de la historia y la belleza natural.",
+        "ventajas": [
+          "Templos históricos como el Templo de Kinkaku-ji y el Templo de Kiyomizu-dera.",
+          "Hermosos jardines zen y paisajes montañosos.",
+          "Rica tradición cultural, incluyendo ceremonias de té y festivales tradicionales."
+        ],
+        "desventajas": [
+          "Limitada vida nocturna en comparación con ciudades más grandes.",
+          "Puede haber multitudes de turistas en temporada alta.",
+          "Algunos lugares pueden tener restricciones de vestimenta y comportamiento."
+        ],
+        "gasto_promedio": {
+          "moneda": "yen japonés",
+          "monto_aproximado": 100
+        },
+        "etiquetas": ["Cultura", "Historia", "Naturaleza", "Relajación", "Arquitectura"]
+      }                  
+]

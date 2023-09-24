@@ -46,6 +46,10 @@ embeddings_model = OpenAIEmbeddings(
     api_type="azure",
     api_base=OPENAI_API_BASE,
 )
+
+vector_store.add(embeddings_model.embed('Paris is a country with a lot of history, arts and food'))
+
+
 cache = Cache(
     vector_store=vector_store,
     embeddings_model=embeddings_model,
